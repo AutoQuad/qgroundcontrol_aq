@@ -4,7 +4,7 @@
 
 * [AutoQuad Project](http://autoquad.org/)
 
-* [AutoQuad Forums](http://forums.autoquad.org)
+* [AutoQuad Forums](http://forum.autoquad.org)
 
 * [QGC AQ Release Notes](http://autoquad.org/wiki/wiki/whats-new/autoquad-software-changes/)
 
