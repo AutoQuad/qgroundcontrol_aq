@@ -153,10 +153,12 @@ LinuxBuild{
 	QMAKE_POST_LINK += && mkdir -p $$TARGETDIR/aq/mixes
 	QMAKE_POST_LINK += && cp -rf $$BASEDIR/aq/mixes/* $$TARGETDIR/aq/mixes
 	QMAKE_POST_LINK += && chmod +x $$TARGETDIR/aq/bin/*
+	QMAKE_POST_LINK += && mkdir -p $$TARGETDIR/files/audio $$TARGETDIR/files/styles $$TARGETDIR/files/lang $$TARGETDIR/files/flags
 	QMAKE_POST_LINK += && cp -rf $$BASEDIR/files/*.* $$TARGETDIR/files
 	QMAKE_POST_LINK += && cp -rf $$BASEDIR/files/audio $$TARGETDIR/files/audio
 	QMAKE_POST_LINK += && cp -rf $$BASEDIR/files/styles $$TARGETDIR/files/styles
-	QMAKE_POST_LINK += && cp -f $$BASEDIR/files/lang/*.qm $$TARGETDIR/files/lang
+	# Following language files are not available on git
+	#QMAKE_POST_LINK += && cp -f $$BASEDIR/files/lang/*.qm $$TARGETDIR/files/lang
 	QMAKE_POST_LINK += && cp -rf $$BASEDIR/files/lang/flags $$TARGETDIR/files/lang/flags
 
 	# osg/osgEarth dynamic casts might fail without this compiler option.
